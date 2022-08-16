@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginFragment2">
+
+    <fragment
+        android:id="@+id/loginFragment2"
+        android:name="com.udacity.shoestore.LoginFragment"
+        android:label="@string/login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_onBoardingFragment"
+            app:destination="@id/onBoardingFragment"
+            app:enterAnim="@anim/slide_in_down"
+            app:exitAnim="@anim/slide_out_down"
+            app:popEnterAnim="@anim/slide_in_down"
+            app:popExitAnim="@anim/slide_out_down" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="com.udacity.shoestore.OnBoardingFragment"
+        android:label="On Boarding"
+        tools:layout="@layout/fragment_on_boarding">
+        <action
+            android:id="@+id/action_onBoardingFragment_to_onBoardingInstructionsFragment"
+            app:destination="@id/onBoardingInstructionsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <argument
+            android:name="username"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingInstructionsFragment"
+        android:name="com.udacity.shoestore.OnBoardingInstructionsFragment"
+        android:label="Instructions"
+        tools:layout="@layout/fragment_on_boarding_instructions">
+        <action
+            android:id="@+id/action_onBoardingInstructionsFragment_to_shoeListingFragment"
+            app:destination="@id/shoeListingFragment"
+            app:enterAnim="@anim/slide_in_down"
+            app:exitAnim="@anim/slide_out_down"
+            app:popEnterAnim="@anim/slide_in_down"
+            app:popExitAnim="@anim/slide_out_down"
+            app:popUpTo="@id/loginFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoeListingFragment"
+        android:name="com.udacity.shoestore.ShoeListingFragment"
+        android:label="Shoe List"
+        tools:layout="@layout/fragment_shoe_detail">
+        <action
+            android:id="@+id/action_shoeListingFragment_to_shoeDetailFragment"
+            app:destination="@id/shoeDetailFragment"
+            app:enterAnim="@anim/small_to_big"
+            app:exitAnim="@anim/big_tosmall"
+            app:popEnterAnim="@anim/small_to_big"
+            app:popExitAnim="@anim/big_tosmall" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoeDetailFragment"
+        android:name="com.udacity.shoestore.ShoeDetailFragment"
+        android:label="Add Shoe Detail" />
+</navigation>
