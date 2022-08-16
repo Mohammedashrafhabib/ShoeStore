@@ -11,7 +11,7 @@
     android:backgroundTint="#12929E"
     tools:context=".OnBoardingFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
