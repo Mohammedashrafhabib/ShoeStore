@@ -3,6 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+<!--    in this case constraint so i can position the button easier as its location will
+be harder to replicate using linear layout-->
 <androidx.constraintlayout.widget.ConstraintLayout
     android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
@@ -13,8 +15,8 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,7 +25,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
-
+<!--linear layout because it's a simple design no need for constraint-->
         <LinearLayout
             android:id="@+id/linearlayout"
             android:layout_width="match_parent"
@@ -34,8 +36,7 @@
             android:paddingLeft="6dp"
             android:paddingTop="6dp"
             android:paddingRight="6dp"
-            android:paddingBottom="6dp">
-        </LinearLayout>
+            android:paddingBottom="6dp"></LinearLayout>
     </ScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

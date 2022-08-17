@@ -8,6 +8,9 @@
             name="shoe"
             type="com.udacity.shoestore.models.Shoe" />
     </data>
+<!--use constraint because its simpler and easier in this case to replicate this design using linear layout I will need to use one horizontal and two vertical layouts
+  in this case constraint is easier due to complexity
+  -->
 <androidx.constraintlayout.widget.ConstraintLayout
     android:id="@+id/frameLayout3"
     android:layout_width="match_parent"
@@ -20,12 +23,13 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="132dp"
+        android:layout_marginBottom="112dp"
         android:backgroundTint="#AC3030"
         android:text="@string/save"
         android:textColor="#CFD8DC"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.238"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
@@ -148,5 +152,20 @@
         app:layout_constraintBottom_toBottomOf="@+id/description"
         app:layout_constraintEnd_toStartOf="@+id/description"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/Cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="148dp"
+        android:text="@android:string/cancel"
+        android:backgroundTint="#AC3030"
+        android:textColor="#CFD8DC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

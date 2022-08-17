@@ -23,14 +23,20 @@ class ShoeDetailFragment : Fragment() {
     ): View? {
         val binding: FragmentShoeDetailBinding =
             DataBindingUtil.inflate(inflater,R.layout.fragment_shoe_detail, container, false)
-        binding.shoe=Shoe("","","",0.0)
         viewModel = ViewModelProvider(parentFragment!!).get(ShoeViewModel::class.java)
-        binding.button.setOnClickListener {
-            Timber.plant(Timber.DebugTree())
+        with(binding) {
+            shoe = Shoe("", "", "", 0.0)
+            button.setOnClickListener {
+                Timber.plant(Timber.DebugTree())
 
-            viewModel.addShoe(binding.shoe!!)
+                viewModel.addShoe(binding.shoe!!)
 //            ViewModelProvider(this).get(ShoeViewModel::class.java)
-            it.findNavController().popBackStack()
+                it.findNavController().popBackStack()
+            }
+            Cancel.setOnClickListener {
+
+                it.findNavController().popBackStack()
+            }
         }
         // Inflate the layout for this fragment
         return binding.root

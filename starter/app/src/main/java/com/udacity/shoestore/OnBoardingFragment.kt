@@ -25,13 +25,14 @@ class OnBoardingFragment : Fragment() {
             DataBindingUtil.inflate(inflater,R.layout.fragment_on_boarding, container, false)
         // Inflate the layout for this fragment
         val arg =OnBoardingFragmentArgs.fromBundle(arguments!!)
+        with(binding) {
+            textView.text = binding.textView.text.toString() + " " + arg.username
+            nextbutton.setOnClickListener { view: View ->
+                view.findNavController()
+                    .navigate(OnBoardingFragmentDirections.actionOnBoardingFragmentToOnBoardingInstructionsFragment())
 
-        binding.textView.text=binding.textView.text.toString()+" "+arg.username
-        binding.nextbutton.setOnClickListener{view: View ->
-            view.findNavController().navigate(OnBoardingFragmentDirections.actionOnBoardingFragmentToOnBoardingInstructionsFragment())
-
+            }
         }
-
         // Inflate the layout for this fragment
 
         return binding.root

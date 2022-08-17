@@ -3,6 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+<!--    easier positioning of text and button right in the center without
+use of padding and margin-->
 <androidx.constraintlayout.widget.ConstraintLayout
     android:id="@+id/frameLayout4"
     android:layout_width="match_parent"

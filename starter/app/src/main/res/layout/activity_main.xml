@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
 
-
+    <!--use drawerLayout to use the back button -->
         <androidx.drawerlayout.widget.DrawerLayout
             android:id="@+id/appBarLayout"
             android:layout_width="match_parent"
@@ -12,7 +12,7 @@
 
             app:menu="@menu/overflow"
             >
-
+            <!--use linear layout because it a simple design toolbar over fragment-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

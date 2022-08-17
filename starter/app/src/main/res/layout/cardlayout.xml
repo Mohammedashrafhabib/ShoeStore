@@ -5,21 +5,19 @@
     xmlns:tools="http://schemas.android.com/tools"
 
    >
-    <androidx.constraintlayout.widget.ConstraintLayout
+<!-- a simple layout only there so margin of cardview can work-->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
+<!--used to give a simple card container for each item  -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:backgroundTint="#AC3030"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
+            android:backgroundTint="#AC3030">
+            <!-- to put the text  in a square formation it's easier to use constraint over multiple linear layouts together-->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -83,5 +81,5 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </layout>
